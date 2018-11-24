@@ -1,4 +1,0 @@
--- Creating seed data for the burgers_db database --
-INSERT INTO games (romLink, title, rating, imageLink, synopsis,playing) VALUES ("//www.retrogames.cc/embed/32112-super-mario-64-usa.html", "Super Mario Kart", "E","http://www.gamesdatabase.org/Media/SYSTEM/Nintendo_N64/Cart/Thumb/Thumb_Super_Mario_64_-_1996_-_Nintendo.jpg", "A classic masterpiece platformer. A plumber saves a princess.", false);
-INSERT INTO games (romLink, title, rating, imageLink, synopsis,playing) VALUES ("//www.retrogames.cc/embed/32914-banjo-kazooie-usa.html","Banjo Kazooie", "E","http://www.nesworld.com/n64/n64list/boxart/nus-nbkp-eur-cb.jpg", "honey bear protagonist saves his sister from witches",false );
-INSERT INTO games (romLink, title, rating, imageLink, synopsis, playing) VALUES ("//www.retrogames.cc/embed/32121-star-fox-64-usa.html","Star Fox", "E", "https://i.ebayimg.com/images/g/vtkAAOSwjDZYgoIt/s-l300.jpg","An arcade space shooter",false )
