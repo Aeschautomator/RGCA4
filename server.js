@@ -2,6 +2,9 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var exphbs = require("express-handlebars");
 var methodOverride = require("method-override");
+var passport   = require('passport')
+var session    = require('express-session')
+var env        = require('dotenv').load()
 
 var db = require("./models");
 
@@ -16,6 +19,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 // Parse application/json
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 // Handlebars config ---------------------------------------/
@@ -27,9 +31,19 @@ app.engine(
 );
 app.set("view engine", "handlebars");
 
+	//Models
+  var models = require("./models");
+
 // Route config -------------------------------------------/
 require("./routes/htmlRoutes")(app);
 require("./routes/apiRoutes")(app);
+
+//Routes
+var authRoute = require('./routes/auth')(app,passport);
+
+//load passport strategies
+require('./config/passport/passport')(passport,models.user);
+
 
 // Starting the server, syncing our models ------------------------------------/
 db.sequelize.sync().then(function() {
