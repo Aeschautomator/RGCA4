@@ -4,14 +4,11 @@ var libraryController = require("../controllers/library");
 var playerController = require("../controllers/player");
 module.exports = function(app) {
   app.get("/", homeController.renderHome);
+
+  app.get("/linkedin", linkedinController.renderlinkedin);
+
+  app.get("/library", libraryController.renderLibrary);
+
+  app.get("/player", playerController.renderplayer);
 };
-// module.exports = function(app) {
-//   app.get("/linkedin", linkedinController.renderlinkedIn);
-// };
-// module.exports = function(app) {
-//   app.get("/library", libraryController.renderLibrary);
-// };
-// module.exports = function(app) {
-//   app.get("/player", playerController.renderplayer);
-// };
 
