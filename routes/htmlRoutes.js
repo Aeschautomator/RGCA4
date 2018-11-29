@@ -3,7 +3,7 @@ var linkedinController = require("../controllers/linkedin");
 var libraryController = require("../controllers/library");
 var playerController = require("../controllers/player");
 module.exports = function(app) {
-  app.get("/", homeController.renderHome);
+  app.get("/index", homeController.renderHome);
 
   app.get("/linkedin", linkedinController.renderlinkedin);
 

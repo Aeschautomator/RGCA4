@@ -1,57 +1,52 @@
-  <div class="row">
+ <div class="row">
         <div class="col-sm-12">
-        <nav class="navbar navbar-dark" style="color:white; background-color: #283747">
-          <a class="navbar-brand"  style="font-family: 'Press Start 2P', cursive; font-size:40px; margin-left:20px"> 
+        <nav class="navbar navbar-dark">
+          <a class="navbar-brand"> 
             RGCA </a>
           <form class="form-inline">
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text" id="basic-addon1"><i class="fas fa-gamepad" style= "font-size: 20px;"></i></span>
                 </div>
-                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                <input type="text" class="form-control"  placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" id="username" required>
               </div>
+                  <input type="password" class="form-control mx-sm-3" placeholder="Password" aria-describedby="passwordHelpInline" id="inputPassword6" required>
+         <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+            </div>
             </form>
         </nav>
       </div>
     </div>
    
-    <br><br>
-    <div class="container">
-    {{!-- <div class= "row"> --}}
-    {{!-- <div class="col-sm-1"></div> --}}
-    
-      {{!-- <div class="col-sm-8"> --}}
-      <div style="color: red; font-family: 'Press Start 2P', cursive;">
-        <div style="background-color:black">
-          
-    <p class="text-center">Click the image of the game you would like to play</p>
-          </div>
-        {{!-- </div> --}}
-      {{!-- </div> --}}
-    
-    
-  <div class="col-sm-1"></div>
+<br>
+<br>
+<br>
+
+<div class="jumbotron jumbotron-fluid">
+  
+    <p class="lead">Click the image of the game you would like to play</p>
   </div>
-    <div class="row">
-       
-      <div class="col-sm-2">
-      </div>
-      <div class="col-md-8">
+  <br>
+  
+<div class="container">
+<div class="row">
+       <div class="col-sm-2">
+        </div>
+    <div class="col-md-8">
         <div id="carouselExampleControls" class="carousel slide" style="width: 600px; height:600px; margin: 0 auto" data-ride="carousel">
             <div class="carousel-inner">
               {{!-- Need an "each" query to pull the games dynamically from the database, and the images from the database! --}}
               <div class="carousel-item active">
                   <a href="/player">  <img class="d-block w-100" src="/images/goldeneye.jpg" alt="007-GoldenEye">
-                  </a> </div>
-              <div class="carousel-item">
+                  </a> 
+                </div>
+           <div class="carousel-item">
                 <a href="/player"><img class="d-block w-100" src="/images/banjokazooie.jpg" alt="Banjokazooie">
-              </div>
+                </div>
               <div class="carousel-item">
                 <a href="/player"><img class="d-block w-100" src="/images/pokemonstadium.jpg" alt="pokemonstadium">
-              </div>
-        
- 
-            </div>
+      </div>      
+</div>
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="sr-only">Previous</span>
@@ -61,9 +56,6 @@
               <span class="sr-only">Next</span>
             </a>
           </div>
-    {{!-- </div>
-    <div class="col-md-2"></div>
-  </div> --}}
   </div>
   <br><br>
 </div>
