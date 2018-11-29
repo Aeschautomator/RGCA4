@@ -1,4 +1,5 @@
 var authController = require('../controllers/authcontroller');
+var homeController = require("../controllers/home");
 
 module.exports = function(app,passport){
 
@@ -13,13 +14,13 @@ app.post('/signup', passport.authenticate('local-signup',  { successRedirect: '/
                                                     ));
 
 
-app.get('/dashboard',isLoggedIn, authController.dashboard);
+app.get('/home',isLoggedIn,  homeController.renderHome);
 
 
 app.get('/logout',authController.logout);
 
 
-app.post('/signin', passport.authenticate('local-signin',  { successRedirect: '/dashboard',
+app.post('/signin', passport.authenticate('local-signin',  { successRedirect: '/home',
                                                     failureRedirect: '/signin'}
                                                     ));
 

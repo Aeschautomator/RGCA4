@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "User login based browser emulator",
   "main": "server.js",
+  "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -17,6 +18,7 @@
     "dotenv": "^6.1.0",
     "express-handlebars": "^3.0.0",
     "express-session": "^1.15.6",
+    "jade": "*",
     "method-override": "^2.3.10",
     "mysql": "^2.16.0",
     "mysql2": "^1.6.4",
@@ -27,6 +29,10 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Hordakai/RGCA4.git"
+  },
+  "engines": {
+    "node": "0.8.x",
+    "npm": "1.1.x"
   },
   "bugs": {
     "url": "https://github.com/Hordakai/RGCA4/issues"
