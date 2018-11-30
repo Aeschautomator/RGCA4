@@ -51,15 +51,15 @@ require('./config/passport/passport')(passport,models.user);
 
 
 // Starting the server, syncing our models ------------------------------------/
-db.sequelize.sync().then(function() {
-  app.listen(PORT, function() {
-    console.info(
-      "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
-      PORT,
-      PORT
-    );
-  });
-});
+// db.sequelize.sync().then(function() {
+//   app.listen(PORT, function() {
+//     console.info(
+//       "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
+//       PORT,
+//       PORT
+//     );
+//   });
+// });
 server.listen(port, () => {
   console.log("App is running on port " + port);
 });
