@@ -5,7 +5,7 @@ var methodOverride = require("method-override");
 var passport   = require('passport')
 var session    = require('express-session')
 var env        = require('dotenv').load()
-
+var port = process.env.PORT || 8000;
 var db = require("./models");
 
 var app = express();
@@ -59,4 +59,7 @@ db.sequelize.sync().then(function() {
       PORT
     );
   });
+});
+server.listen(port, () => {
+  console.log("App is running on port " + port);
 });
