@@ -10,5 +10,7 @@ module.exports = function(app) {
   app.get("/library", libraryController.renderLibrary);
 
   app.get("/player", playerController.renderplayer);
+
+  app.get('/', authController.signin);
 };
 
